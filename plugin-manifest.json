@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "name": "adsb-tracker",
+  "version": "0.1.0",
+  "description": "ADS-B aircraft tracking — consumes OpenSky Network API and raw Mode-S/ADS-B data. Tracks aircraft position, velocity, altitude, callsign, squawk codes. Detects emergency transponder codes (7700/7500/7600), UAVs, high-performance aircraft patterns.",
+  "author": "DigitalArsenal",
+  "license": "Apache-2.0",
+  "inputFormats": ["application/json"],
+  "outputFormats": ["$ADB"],
+  "dataSources": [
+    {
+      "name": "OpenSky Network",
+      "url": "https://opensky-network.org/api/states/all",
+      "type": "REST",
+      "auth": "oauth2 (optional, free tier available)"
+    }
+  ]
+}
